@@ -1,17 +1,16 @@
 <template>
-  <div>
+  <q-layout view="lHh Lpr lFf">
     <Navbar />
-    <Carousel />
-    <div class="q-pa-md row q-gutter-md">
-      <ProductCard v-for="i in 4" :key="i" />
-    </div>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
     <Footer />
-  </div>
+  </q-layout>
 </template>
 
 <script setup>
 import Navbar from './components/Navbar.vue'
-import Carousel from './components/Carousel.vue'
-import ProductCard from './components/ProductCard.vue'
 import Footer from './components/Footer.vue'
 </script>
